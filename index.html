@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo Trigonométrico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="total">
+        <div class="circle" id="circulo">
+            <div class="angle" id="angulo"></div>
+            <div id="coss"></div>
+            <div id="sin"></div>
+            <div class="x" id="x"></div>
+            <div class="y" id="y"></div>
+        </div>
+        <input type="range" min="0" max="360" step="1" value="0" id="anda" oninput="Muda(seno, cosseno, Atualiza)" onchange="Muda(seno, cosseno, Atualiza)">
+
+        <div id="show">
+            <div><input type="checkbox" name="mG" id="mG" onchange="Line('mG', 'angulo')"><label for="mG" id="mostraGraus">Ângulo: 0º</label></div>
+            <div><input type="checkbox" name="mC" id="mC" onchange="Line('mC', 'coss')"><label for="mC" id="cosseno">Cosseno: 1</label></div>
+            <div><input type="checkbox" name="mS" id="mS" onchange="Line('mS', 'sin')"><label for="mS" id="seno">Seno: 0</label></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
